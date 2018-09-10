@@ -1,4 +1,48 @@
 • What is a gitignore file and what should it include for a Java project?
+
+  With Gitignore file (.gitignore), Git is able to ignore certain files or folders, before a commit is made.
+  There are certain files which are OS, language or IDE specific. These files are specific to a user's 
+  resources. These files are unnecessary for other users working in the common project. Hence, these files are 
+  ignored by it and only relevant files, related to project are put in use in Git and GitHub.
+
+  For Java project it should include:
+	IDE Specific:
+		Eclipse:
+			.settings
+			.project
+			.classpath
+		Netbeans:
+			nbproject
+			nbbuild
+			nbactions.xml
+	Language Specific:
+		.jar
+		.war
+		.ear
+		.class
+		release.properties
+		pom.xml.tag
+	
+  
 • What does fast-forward in Git mean?
+  
+  When the new checked-out branch from the master branch is modified, it contains new changes that is not
+  there is "master". Hence, for merging this new branch back to master, the master has to be updated with
+  the new modified changes. This updation of "master" by Git is "Fast-forward".
+  In the TASK2 given to us, "testbranch" was modified and then "master" was fast-forwarded, to ensure 
+  correct merging of "testbranch" into "master".
+ 
 • Why should you have different branches?
+  
+  To ensure that more tasks in a project are done simulataneously, without conflicts. There are more than one 
+  software developers working in a project. Each branch is controlled by one software developer. Branching 
+  ensures that the project work is shared into branches among the developers and then the modifications done 
+  in each branch is merged to the main branch. Each branch performs the work locally withough conflicting 
+  other's branch (job). 
+
 • In a project how many remote Git repositories do you usually have?
+
+  We usually have only one remote Git repository for a project, which ensures consistency. If there will
+  be more than one main copies of project, it will cause confusion and hassle as the developers would have to
+  take care that they push,pull and merge to all the remote repositories consistently without creating conflicts. 
+  One remote Git repository is enough to store all previous, original and new versions of the project.
